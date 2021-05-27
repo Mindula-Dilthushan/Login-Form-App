@@ -11,4 +11,12 @@ export class SignInFormComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  userName='';
+
+  setUserName(text: string){
+    this.userName=text;
+    console.log(this.userName);
+  }
+
 }

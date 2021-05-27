@@ -10,25 +10,33 @@
 
     <div class="container">
       <div class="form">
-        <h2>LOGIN to CodePen</h2>
+        <h2>Login Form</h2>
+
+
         <form action="">
+
           <div class="inputBx">
-            <input type="text" required="required">
+            <input type="text" required="required" name="userName" id="userName" class="user-name"
+                   #element (keyup)="setUserName(element.value)">
             <span>Login</span>
             <img src="https://www.flaticon.com/svg/static/icons/svg/709/709699.svg" alt="user">
           </div>
+
           <div class="inputBx password">
             <input id="password-input" type="password" name="password" required="required">
             <span>Password</span>
-            <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+            <a href="#" class="password-control"></a>
             <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828471.svg" alt="lock">
           </div>
+
           <label class="remember"><input type="checkbox">
             Remember</label>
           <div class="inputBx">
             <input type="submit" value="Log in" disabled>
           </div>
+
         </form>
+
         <p>Forgot password? <a href="#">Click Here</a></p>
         <p>Don't have an account <a href="#">Sign up</a></p>
       </div>
