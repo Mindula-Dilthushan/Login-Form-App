@@ -13,17 +13,21 @@
         <h2>Login Form</h2>
 
 
-        <form action="">
-
+        <form [formGroup]="signInForm">
           <div class="inputBx">
-            <input type="text" required="required" name="userName" id="userName" class="user-name">
+            <input formControlName="email" type="email" required="required" class="input-text">
                    <!--#element (keyup.enter)="setUserName(element.value)">-->
+<!--            <input type="email" required="required" name="userName" id="userName" class="input-text" [(ngModel)]="email">-->
+
             <span>Login</span>
             <img src="https://www.flaticon.com/svg/static/icons/svg/709/709699.svg" alt="user">
           </div>
 
           <div class="inputBx password">
-            <input id="password-input" type="password" name="password" required="required">
+            <input formControlName="password" id="password-input" type="password" required="required" class="input-text">
+
+<!--            <input id="password-input" type="password" name="password" required="required" class="input-text" [(ngModel)]="password">-->
+
             <span>Password</span>
             <a href="#" class="password-control"></a>
             <img src="https://www.flaticon.com/svg/static/icons/svg/1828/1828471.svg" alt="lock">
@@ -32,7 +36,7 @@
           <label class="remember"><input type="checkbox">
             Remember</label>
           <div class="inputBx">
-            <input type="submit" value="Log in" disabled>
+            <input type="submit" value="Sign In" class="btn">
           </div>
 
         </form>
@@ -46,9 +50,9 @@
         <!--  Two Way Data Binding-->
 
         <!-- [(ngModel)] == banana in the box-->
-        <input type="text" [(ngModel)]="userName">
-        <br>
-        {{userName}}
+<!--        <input type="text" [(ngModel)]="userName">-->
+<!--        <br>-->
+<!--        {{userName}}-->
 
 <!--        <p>Forgot password? <a href="#">Click Here</a></p>-->
 <!--        <p>Don't have an account <a href="#">Sign up</a></p>-->

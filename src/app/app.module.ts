@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TestingComponent } from './testing/testing.component';
 import { SignInFormComponent } from './sign-in-form/sign-in-form.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
