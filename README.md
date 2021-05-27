@@ -36,3 +36,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## One Way Data Binding
 ![mindula](https://github.com/Mindula-Dilthushan/Login-Form-App/blob/master/demo/One%20Way%20Data%20Binding.jpg)
+
+## Two Way Data Binding
+![mindula](https://github.com/Mindula-Dilthushan/Login-Form-App/blob/master/demo/Two%20Way%20Data%20Binding.jpg)
