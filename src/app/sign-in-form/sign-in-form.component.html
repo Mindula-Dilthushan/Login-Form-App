@@ -17,7 +17,7 @@
 
           <div class="inputBx">
             <input type="text" required="required" name="userName" id="userName" class="user-name"
-                   #element (keyup)="setUserName(element.value)">
+                   #element (keyup.enter)="setUserName(element.value)">
             <span>Login</span>
             <img src="https://www.flaticon.com/svg/static/icons/svg/709/709699.svg" alt="user">
           </div>
