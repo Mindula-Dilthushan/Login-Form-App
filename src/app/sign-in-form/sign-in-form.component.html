@@ -13,7 +13,7 @@
         <h2>Login Form</h2>
 
 
-        <form [formGroup]="signInForm">
+        <form [formGroup]="signInForm" (ngSubmit)="signIn()">
           <div class="inputBx">
             <input formControlName="email" type="email" required="required" class="input-text">
                    <!--#element (keyup.enter)="setUserName(element.value)">-->

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-sign-in-form',
@@ -29,8 +29,22 @@ export class SignInFormComponent implements OnInit {
   // }
 
   signInForm = new FormGroup({
-    email : new FormControl(),
-    password : new FormControl()
+    email : new FormControl(
+      'username@gmail.com',
+      Validators.email
+    ),
+    password : new FormControl(
+      '',
+      [
+        Validators.email,
+        Validators.minLength(6),
+        Validators.maxLength(10)
+      ]
+    )
   });
 
+  signIn(){
+    console.log(this.signInForm.get('email'))
+    console.log(this.signInForm.get('password'))
+  }
 }
