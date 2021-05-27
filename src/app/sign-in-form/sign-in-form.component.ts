@@ -30,14 +30,17 @@ export class SignInFormComponent implements OnInit {
 
   signInForm = new FormGroup({
     email : new FormControl(
-      'username@gmail.com',
-      Validators.email
+      '',
+      [
+          Validators.email,
+          Validators.required
+      ]
     ),
     password : new FormControl(
       '',
       [
         Validators.email,
-        Validators.minLength(6),
+        Validators.minLength(4),
         Validators.maxLength(10)
       ]
     )

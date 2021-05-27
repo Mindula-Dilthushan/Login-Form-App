@@ -16,6 +16,11 @@
         <form [formGroup]="signInForm" (ngSubmit)="signIn()">
           <div class="inputBx">
             <input formControlName="email" type="email" required="required" class="input-text">
+               <p class="alert"
+                  *ngIf="signInForm.get('email')?.touched
+                  && signInForm.get('email')?.invalid">
+                 Email is required
+               </p>
                    <!--#element (keyup.enter)="setUserName(element.value)">-->
 <!--            <input type="email" required="required" name="userName" id="userName" class="input-text" [(ngModel)]="email">-->
 
@@ -25,7 +30,11 @@
 
           <div class="inputBx password">
             <input formControlName="password" id="password-input" type="password" required="required" class="input-text">
-
+            <p class="alert"
+               *ngIf="signInForm.get('password')?.touched
+                  && signInForm.get('password')?.invalid">
+              Password is required
+            </p>
 <!--            <input id="password-input" type="password" name="password" required="required" class="input-text" [(ngModel)]="password">-->
 
             <span>Password</span>
@@ -36,7 +45,7 @@
           <label class="remember"><input type="checkbox">
             Remember</label>
           <div class="inputBx">
-            <input type="submit" value="Sign In" class="btn">
+            <input type="submit" value="Sign In" class="btn{{signInForm.invalid?'invalid':''}}" id="btn_SignIn">
           </div>
 
         </form>

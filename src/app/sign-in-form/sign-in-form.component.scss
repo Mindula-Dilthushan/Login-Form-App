@@ -6,12 +6,20 @@
   box-shadow: bord    er-box;
   font-family: 'El Messiri', sans-serif;
 }
-
+.alert{
+  color: white;
+  background-color: Red;
+  padding: 8px 10px;
+  margin: 5px 0;
+}
 body {
   background: #031323;
   overflow: hidden;
 }
-
+.invalid{
+  background-color: #929292;
+  cursor: not-allowed;
+}
 img {
   width: 32px;
 }
