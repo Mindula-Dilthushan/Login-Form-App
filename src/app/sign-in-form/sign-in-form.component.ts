@@ -14,9 +14,9 @@ export class SignInFormComponent implements OnInit {
 
   userName='';
 
-  setUserName(text: string){
-    this.userName=text;
-    console.log(this.userName);
-  }
+  // setUserName(text: string){
+  //   this.userName=text;
+  //   console.log(this.userName);
+  // }
 
 }
